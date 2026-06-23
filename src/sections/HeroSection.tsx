@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion, useScroll } from 'framer-motion';
-import { useScrollContainer } from '../components/HorizontalScroll';
+import { motion } from 'framer-motion';
 import { ContactButton } from '../components/ContactButton';
 import { FadeIn } from '../components/FadeIn';
 
@@ -9,13 +8,6 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onContactClick }) => {
-  const containerRef = useScrollContainer();
-
-  // Scroll animations for the giant hero text
-  const { scrollXProgress } = useScroll({ container: containerRef });
-
-
-
   return (
     <section 
       id="home" 

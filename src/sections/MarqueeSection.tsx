@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
 // All Skills combined for a centered grid view
 const ALL_SKILLS = [
@@ -33,7 +33,7 @@ export const MarqueeSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Container animation for staggering children
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -43,7 +43,7 @@ export const MarqueeSection: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
   };
